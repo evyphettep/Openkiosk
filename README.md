@@ -1,0 +1,2 @@
+# Openkiosk
+Kiosk machine configuration
