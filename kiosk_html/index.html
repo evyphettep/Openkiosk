@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Student Kiosk Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+{
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style the header */
+header {
+  background-color: #8c0b42;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+article {
+  float: center;
+  padding: 10px;
+  width: 100%;
+  background-color: #ccc;
+  height: 300px;
+}
+
+
+/* Style the footer */
+
+footer {
+  background-color: #8c0b42;
+  padding: 10px;
+  text-align: center;
+  color: white;
+	
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  footer, article {
+    width: 100%;
+    height: auto;
+  }
+
+
+</style>
+</head>
+
+<header>
+<h1>Student Aid Kiosk</h1>
+</header>
+
+<body>
+	<article> 
+		<div class="column">
+			<a 
+			href="https://my.nmsu.edu">
+				<img src="img\my.png" width="245" height="142">
+			</a>
+		</div>
+
+
+		<div class="column">
+			<a 
+			href="https://studentaid.gov">
+				<img src="img\fasfa.png" width="245" height="142">
+			</a>
+		</div>
+
+		<div class="column">
+			<a
+			href="https://www.irs.gov/">
+				<img src="img\irs.png" width="245" height="142">
+			</a>
+		</div>
+	</article>
+	<article>
+
+		<div class="column">
+			<a href="https://nmsu.edu">
+				<img src="img\NMSU.png" width="245" height="142">
+			</a>
+		</div>
+
+		<div class="column">
+			<a
+			href="https://scholarships.nmsu.edu/">
+				<img src="img\scholar.png" width="245" height="142">
+			</a>
+		</div>
+	</article>
+	
+</body>
+
+<footer>
+  <p>saemtech@nmsu.edu</p>
+</footer>
+
+</html>
