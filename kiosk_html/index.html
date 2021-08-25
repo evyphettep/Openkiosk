@@ -32,7 +32,7 @@ article {
   flex: 1 0 auto;
   padding: 10px;
   width: 100%;
-  background-color: #ccc;
+  background-image: url("Hardman_Jacobs.jpg");
   justify-content: space-between;
   align-items: center;
   min-height: 70vh;
@@ -48,6 +48,12 @@ footer {
   flex-shrink: 0;
 }
 
+.rect-svg {
+	background-color:#8c0b42;
+}
+.rect-svg:hover{
+	background-color:#ccc; !important;
+}
 
 </style>
 
@@ -59,55 +65,56 @@ footer {
 <header>
 		<h1>Student Aid Kiosk</h1>
 </header>
-	<article> 
+	<article>
+		<a 
+			href="https://my.nmsu.edu">
 		<div class="item">	
-		<svg width="400" height="110">
-			<a 
-				href="https://my.nmsu.edu">
-				<rect width="300" height="100" style="fill:#8c0b42;" />
-				<text text-anchor="middle"  x="150" y="63" fill="white" font-size="50px" font-family="Open Sans" font-weight="bold">myNMSU</text>
-			</a>
+		<svg class = "rect-svg" width="300" height="100">
+				<text text-anchor="middle"  x="150" y="63" fill="white" font-size="50px" font-family="Open Sans" font-weight="bold">myNMSU</text>		
 		</svg> 
+		</a>
 		</div>
 
 
 		<div class="item">
-			<svg width="400" height="110">
-				<a 
+			<a 
 				href="https://studentaid.gov">
-					<rect width="300" height="100" style="fill:#8c0b42;" />
+			<svg class = "rect-svg" width="300" height="100">
+				
 					<text text-anchor="middle"  x="150" y="63" fill="white" font-size="50px" font-family="Open Sans" font-weight="bold">FAFSA</text>
-				</a>
+				
 			</svg>
+		</a>
 		</div>
 
 		<div class="item">
-			<svg width="400" height="110">
-				<a 
+			<a 
 					href="https://www.irs.gov/">
-					<rect width="300" height="100" style="fill:#8c0b42;" />
+			<svg class = "rect-svg"  width="300" height="100">
+				
 					<text text-anchor="middle"  x="150" y="63" fill="white" font-size="50px" font-family="Open Sans" font-weight="bold">IRS</text>
-				</a>
+				
 			</svg> 
+		</a>
 		</div>
 
 		<div class="item">
-			<svg width="400" height="110">
-				<a href="https://nmsu.edu">
-					<rect width="300" height="100" style="fill:#8c0b42;" />
+			<a href="https://nmsu.edu">
+			<svg class = "rect-svg" width="300" height="100">
 					<text text-anchor="middle"  x="150" y="63" fill="white" font-size="50px" font-family="Open Sans" font-weight="bold">NMSU</text>
-				</a>
 			</svg> 
+		</a>
 		</div>
 
-		<div class="item">	
-			<svg width="400" height="110">
-				<a
+		<div class="item">
+			<a
 					href="https://scholarships.nmsu.edu/">
-					<rect width="300" height="100" style="fill:#8c0b42;" />
+			<svg class = "rect-svg"  width="300" height="100">
+				
 					<text text-anchor="middle"  x="150" y="63" fill="white" font-size="35px" font-family="Open Sans" font-weight="bold">Scholar Dollar</text>
-				</a>
+			
 			</svg> 
+		</a>
 		</div>
 	</article>
 
