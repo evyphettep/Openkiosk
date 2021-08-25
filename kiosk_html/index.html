@@ -10,9 +10,7 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
   height: 100%
- 
 }
 
 .item {
@@ -21,10 +19,11 @@ body {
 }
 
 header {
+  font-family: Gotham;
   background-color: #8c0b42;
   padding: 30px;
   text-align: center;
-  font-size: 35px;
+  font-size: 40px;
   color: white;
 }
 article {
@@ -41,13 +40,14 @@ article {
 
 
 footer {
-height: 60px;
-background-color: #8c0b42;
-padding: 10px;
+  height: 60px;
+  background-color: #8c0b42;
+  padding: 10px;
   text-align: center;
   color: white;	
   flex-shrink: 0;
 }
+
 
 </style>
 
@@ -60,42 +60,54 @@ padding: 10px;
 		<h1>Student Aid Kiosk</h1>
 </header>
 	<article> 
-		<div class="item">
-
+		<div class="item">	
+		<svg width="400" height="110">
 			<a 
-			href="https://my.nmsu.edu">
-			
-				<img src="my.png" width="245" height="142">
+				href="https://my.nmsu.edu">
+				<rect width="300" height="100" style="fill:#8c0b42;" />
+				<text text-anchor="middle"  x="150" y="63" fill="white" font-size="50px" font-family="Open Sans" font-weight="bold">myNMSU</text>
 			</a>
-
+		</svg> 
 		</div>
 
 
 		<div class="item">
-			<a 
-			href="https://studentaid.gov">
-				<img src="fasfa.png" width="245" height="142">
-			</a>
+			<svg width="400" height="110">
+				<a 
+				href="https://studentaid.gov">
+					<rect width="300" height="100" style="fill:#8c0b42;" />
+					<text text-anchor="middle"  x="150" y="63" fill="white" font-size="50px" font-family="Open Sans" font-weight="bold">FAFSA</text>
+				</a>
+			</svg>
 		</div>
 
 		<div class="item">
-			<a
-			href="https://www.irs.gov/">
-				<img src="irs.png" width="245" height="142">
-			</a>
+			<svg width="400" height="110">
+				<a 
+					href="https://www.irs.gov/">
+					<rect width="300" height="100" style="fill:#8c0b42;" />
+					<text text-anchor="middle"  x="150" y="63" fill="white" font-size="50px" font-family="Open Sans" font-weight="bold">IRS</text>
+				</a>
+			</svg> 
 		</div>
 
 		<div class="item">
-			<a href="https://nmsu.edu">
-				<img src="NMSU.png" width="245" height="142">
-			</a>
+			<svg width="400" height="110">
+				<a href="https://nmsu.edu">
+					<rect width="300" height="100" style="fill:#8c0b42;" />
+					<text text-anchor="middle"  x="150" y="63" fill="white" font-size="50px" font-family="Open Sans" font-weight="bold">NMSU</text>
+				</a>
+			</svg> 
 		</div>
 
-		<div class="item">
-			<a
-			href="https://scholarships.nmsu.edu/">
-				<img src="scholar.png" width="245" height="142">
-			</a>
+		<div class="item">	
+			<svg width="400" height="110">
+				<a
+					href="https://scholarships.nmsu.edu/">
+					<rect width="300" height="100" style="fill:#8c0b42;" />
+					<text text-anchor="middle"  x="150" y="63" fill="white" font-size="35px" font-family="Open Sans" font-weight="bold">Scholar Dollar</text>
+				</a>
+			</svg> 
 		</div>
 	</article>
 
