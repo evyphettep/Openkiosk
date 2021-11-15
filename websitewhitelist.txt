@@ -1,0 +1,192 @@
+#
+# STRICT - only an exact URL match will be let through, though it is tolerant of trailing slashes
+#    ALL - all pages from a specified path will be let through
+#        - The * wildcard will do a domain match, but only with the ALL filter
+#
+#  foo.org = www.foo.org
+#
+# JAVASCRIPT - Allow javascript to run on the page (default)
+# NOJAVASCRIPT - Block javascript from running on page
+# http protocol is assumed other protocols like https:// MUST be specifically added
+
+# SYNTAX FORMAT 
+# filter[HOST, ALL/STRICT, JAVASCRIPT/NOJAVASCRIPT]; 
+
+# use specific protocol if not assuming http:// 
+# eg: https://
+# Most sites today are not using http:// and instead redirect to https:// 
+# so ensure the correct protocol for the site you want to filter.
+# For example you might allow www.google.com but that url redirects to https://www.google.com
+# which will be blocked if the https:// protocol is not set here.
+
+# SAMPLE ENTRIES:
+
+# using ALL and JAVASCRIPT
+# filter[www.mozdevgroup.com, ALL, JAVASCRIPT];
+
+# although an ALL declaration is used above this declaration this will 
+# specifically block javascript for this url
+# filter[https://www.mozdevgroup.com/dropbox/test/js.html, STRICT, NOJAVASCRIPT];
+
+# filter[www.mozilla.org/projects/firefox/, STRICT, NOJAVASCRIPT];
+
+# JAVASCRIPT is enabled by default
+# filter[*.brooklynmuseum.org/, ALL];
+
+# JAVASCRIPT is enabled by default
+# filter[*.mozdev.org/, ALL];
+
+# only this page will be displayed
+filter[www.mozilla.org/en-US/thunderbird/, STRICT, JAVASCRIPT];
+
+# entire site and all subdomains will be filtered with javascript disabled
+filter[https://slashdot.org, ALL, NOJAVASCRIPT];
+
+# entire site and all subdomains will be filtered with javascript enabled
+#filter[https://duckduckgo.com, ALL, JAVASCRIPT];
+
+# False positives exist.
+# Sometimes news.google.com loads youtube.com into elements on the page, 
+# so in order for https://news.google.com to load, you need to enable youtube as well.
+# Entire site and all subdomains will be filtered with javascript enabled.
+
+# The following filters are NMSU related sites
+
+filter [http://nmsu.edu, ALL, JAVASCRIPT];
+filter[http://banner-ss-p-nmsu.edu:9012, ALL, JAVASCRIPT];
+filter[http://nmsubookstore.com, ALL, JAVASCRIPT];
+filter[http://nmstatesports.com, ALL, JAVASCRIPT];
+filter[http://quicklaunchsso.com, ALL, JAVASCRIPT];
+
+# The following are financial aid related sites
+
+filter[http://accessgroup.org, ALL, JAVASCRIPT];
+filter[http://bankofamerica.com, ALL, JAVASCRIPT];
+filter[http://chasecustompages.com, ALL, JAVASCRIPT];
+filter[http://citibank.com, ALL, JAVASCRIPT];
+filter[http://nmstudentloans.org, ALL, JAVASCRIPT];
+filter[http://wellsfargo.com, ALL, JAVASCRIPT];
+filter[http://chasestudentloans.com, ALL, JAVASCRIPT];
+filter[http://salliemae.com, ALL, JAVASCRIPT];
+filter[http://key.com, ALL, JAVASCRIPT];
+filter[http://signmyloan.com, ALL, JAVASCRIPT];
+filter[http://fastweb.com, ALL, JAVASCRIPT];
+filter[http://collegeloan.com, ALL, JAVASCRIPT];
+filter[http://glhec.org, ALL, JAVASCRIPT];
+filter[http://verisign.com, ALL, JAVASCRIPT];
+filter[http://digicert.com, ALL, JAVASCRIPT];
+filter[http://householdbank.com, ALL, JAVASCRIPT];
+filter[http://mapping-your-future.org, ALL, JAVASCRIPT];
+filter[http://mappingyourfuture.org, ALL, JAVASCRIPT];
+filter[http://staffordloan.com, ALL, JAVASCRIPT];
+filter[http://campusvisitor.com, ALL, JAVASCRIPT];
+filter[http://elmselect.com, ALL, JAVASCRIPT];
+filter[http://ecsi.net, ALL, JAVASCRIPT];
+
+
+# The following are government sites
+
+filter[http://ed.gov, ALL, JAVASCRIPT];
+filter[https://irs.gov, ALL, JAVASCRIPT];
+filter[http://sss.gov, ALL, JAVASCRIPT];
+filter[http://studentloans.gov, ALL, JAVASCRIPT];
+filter[http://studentaid.gov, ALL, JAVASCRIPT];
+
+
+# The following are college related
+
+filter[http://unm.edu, ALL, JAVASCRIPT];
+filter[http://utep.edu, ALL, JAVASCRIPT];
+filter[http://cnm.edu, ALL, JAVASCRIPT];
+filter[http://epcc.edu, ALL, JAVASCRIPT];
+filter[http://nmhu.edu, ALL, JAVASCRIPT];
+filter[http://wnmu.edu, ALL, JAVASCRIPT];
+filter[http://clovis.edu, ALL, JAVASCRIPT];
+filter[http://dinecollege.edu, ALL, JAVASCRIPT];
+filter[http://enmu.edu, ALL, JAVASCRIPT];
+filter[http://nmjc.edu, ALL, JAVASCRIPT];
+filter[http://nmmi.edu, ALL, JAVASCRIPT];
+filter[http://nnmc.edu, ALL, JAVASCRIPT];
+filter[http://state.nm.us, ALL, JAVASCRIPT];
+filter[http://careeronestop.org/, ALL, JAVASCRIPT];
+
+filter[http://lvti.cc.nm.us, ALL, JAVASCRIPT];
+filter[http://mesalands.edu, ALL, JAVASCRIPT];
+
+filter[http://sjc.cc.nm.us, ALL, JAVASCRIPT];
+filter[http://sfccnm.edu, ALL, JAVASCRIPT];
+filter[http://sipi.edu, ALL, JAVASCRIPT];
+
+filter[http://cashnet.com, ALL, JAVASCRIPT];
+filter[http://thawte.com, ALL, JAVASCRIPT];
+filter[http://commerce.cashnet.com/CASHNETF/selfserve/enterpmtinfo.aspx/, ALL, JAVASCRIPT];
+filter[http://hacu.net, ALL, JAVASCRIPT];
+filter[http://microsoft.com, ALL, JAVASCRIPT];
+filter[http://financialaidtv.com, ALL, JAVASCRIPT];
+filter[http://studentlendinganalytics.com, ALL, JAVASCRIPT];
+filter[http://fatvcounseling.com, ALL, JAVASCRIPT];
+filter[http://jobsearchintelligence.com, ALL, JAVASCRIPT];
+filter[http://microsoftonline.com, ALL, JAVASCRIPT];
+
+# The following are Microsoft related sites
+filter[http://office.com, ALL, JAVASCRIPT];
+filter[http://office365.com, ALL, JAVASCRIPT];
+filter[http://onenote.com, ALL, JAVASCRIPT];
+filter[http://sharepoint.com, ALL, JAVASCRIPT];
+filter[http://outlook.com, ALL, JAVASCRIPT];
+
+# misc
+
+filter[http://nelnet.net, ALL, JAVASCRIPT];
+filter[http://customschool.com, ALL, JAVASCRIPT];
+filter[http://wachovia.com, ALL, JAVASCRIPT];
+filter[http://sssc.com, ALL, JAVASCRIPT];
+filter[http://askadmissions.net, ALL, JAVASCRIPT];
+filter[http://google-analytics.com, ALL. JAVASCRIPT];
+filter[http://googlesyndicatedsearch.com, ALL, JAVASCRIPT];
+filter[http://google.com, ALL, JAVASCRIPT];
+filter[http://stan.vangent.com, ALL, JAVASCRIPT];
+filter[http://heartlandecsi.com, ALL, JAVASCRIPT];
+filter[http://noellevitz.com, ALL, JAVASCRIPT];
+filter[http://avowsystems.com, ALL, JAVASCRIPT];
+filter[http://financialavenue.org, ALL, JAVASCRIPT];
+filter[http://michaelsutter.com, ALL, JAVASCRIPT];
+filter[http://actstudent.org, ALL, JAVASCRIPT];
+filter[http://live.com, ALL, JAVASCRIPT];
+filter[http://ruffalonl.com, ALL, JAVASCRIPT];
+filter[https://customschool.com, ALL, JAVASCRIPT];
+filter[https://wachovia.com/, ALL, JAVASCRIPT];
+filter[https://chasestudentloans.com/, ALL, JAVASCRIPT];
+filter[https://sssc.com/, ALL, JAVASCRIPT];
+filter[https://askadmissions.net/, ALL, JAVASCRIPT];
+filter[https://salliemae.com/, ALL, JAVASCRIPT];
+filter[https://key.com/, ALL, JAVASCRIPT];
+filter[https://signmyloan.com/, ALL, JAVASCRIPT];
+filter[https://glhec.org/, ALL, JAVASCRIPT];
+filter[https://banner-ss-p-nmsu.edu:9012/, ALL, JAVASCRIPT];
+filter[https://nmsubookstore.com/, ALL, JAVASCRIPT];
+filter[https://verisign.com/, ALL, JAVASCRIPT];
+filter[https://digicert.com/, ALL, JAVASCRIPT];
+filter[https://householdbank.com/, ALL, JAVASCRIPT];
+filter[https://mapping-your-future.org/, ALL, JAVASCRIPT];
+filter[https://mappingyourfuture.org/, ALL, JAVASCRIPT];
+filter[https://googlesyndicatedsearch.com/, ALL, JAVASCRIPT];
+filter[https://google.com/, ALL, JAVASCRIPT];
+filter[https://campusvisitor.com/, ALL, JAVASCRIPT];
+filter[https://stan.vangent.com/, ALL, JAVASCRIPT];
+filter[https://*clovis.edu/, ALL, JAVASCRIPT];
+filter[https://*dinecollege.edu/, ALL, JAVASCRIPT];
+filter[https://*enmu.edu/, ALL, JAVASCRIPT];
+filter[https://*lvti.cc.nm.us/, ALL, JAVASCRIPT];
+filter[https://*mesalands.edu/, ALL, JAVASCRIPT];
+filter[https://*nmjc.edu/, ALL, JAVASCRIPT];
+filter[https://*nmmi.edu/, ALL, JAVASCRIPT];
+filter[https://*nnmc.edu/, ALL, JAVASCRIPT];
+filter[https://*sjc.cc.nm.us/, ALL, JAVASCRIPT];
+filter[https://*sfccnm.edu/, ALL, JAVASCRIPT];
+filter[https://*sipi.edu/, ALL, JAVASCRIPT];
+filter[https://*jobsearchintelligence.com/, ALL, JAVASCRIPT];
+filter[https://*applyyourself.com/, ALL, JAVASCRIPT];
+
+
+# end whitelist
